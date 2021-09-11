@@ -9,6 +9,15 @@ function Car() {
 
     this.carImage = new Image();
     this.carImage.src = 'car-right.png';
+    let carRight = new Image()
+    let carLeft = new Image()
+    let carUp = new Image()
+    let carDown = new Image()
+
+    carRight.src = 'car-right.png'
+    carLeft.src = 'car-left.png'
+    carUp.src = 'car-up.png'
+    carDown.src = 'car-down.png'
 
     this.draw = function () {
         // ctx.fillStyle = "#ffffff"
@@ -47,22 +56,22 @@ function Car() {
             case 'Up':
                 this.xSpeed = 0;
                 this.ySpeed = -arbitrarySpeed;
-                this.carImage.src = 'car-up.png';
+                this.carImage = carUp;
                 break;
             case 'Down':
                 this.xSpeed = 0;
                 this.ySpeed = arbitrarySpeed;
-                this.carImage.src = 'car-down.png';
+                this.carImage = carDown
                 break;
             case 'Left':
                 this.xSpeed = -arbitrarySpeed;
                 this.ySpeed = 0;
-                this.carImage.src = 'car-left.png';
+                this.carImage = carLeft;
                 break;
             case 'Right':
                 this.xSpeed = arbitrarySpeed;
                 this.ySpeed = 0;
-                this.carImage.src = 'car-right.png';
+                this.carImage = carRight;
                 break;
             case 'Enter':
                 this.xSpeed = 0;
